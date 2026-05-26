@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-st.title("Prediction of Phyllodes Tumor Based on Preoperative Features")
+st.title("PredPhylloPre (Prediction of Phyllodes Tumor Based on Preoperative Features)")
 
 st.markdown("""
     This model predicts whether a breast phyllodes tumor is **benign** or **non-benign** based on preoperative clinical features.
