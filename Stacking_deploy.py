@@ -16,8 +16,10 @@ st.markdown("""
 FA_history = st.selectbox("History of fibroadenoma:", options=['No', 'Yes'])
 age = st.number_input("Age (years):", min_value=1, max_value=120, value=40)
 maximum_size = st.number_input("Maximum tumor size (cm):", min_value=0.0, max_value=50.0, value=2.0, step=0.1)
-num = st.selectbox("Number of tumors:", options=[1, 2, 3, 4, 5])
-BI_rads = st.selectbox("BI-RADS category:", options=[1, 2, 3, 4, 5])
+NUM_OPTIONS = {"Single": 1, "Multiple": 2}
+num_label = st.selectbox("Number of tumors:", options=list(NUM_OPTIONS.keys()))
+num = NUM_OPTIONS[num_label]
+BI_rads = st.selectbox("BI-RADS category:", options=[2, 3, 4, 5])
 US_DIAGNOSIS_OPTIONS = {
     "Other benign component": 1,
     "Intraductal papilloma": 2,
